@@ -1,12 +1,63 @@
-$bg: #ff0;
+$text: #27300f;
+$orange: #d26a22;
+$white: #fff;
 
+.header {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__nav {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    gap: 48px;
+  }
+  &__link {
+    font-size: 16px;
+    color:$text;
+    text-decoration: none;
+    &:hover {
+      color: $orange;
+    }
+  }
+  &__tel {
+    text-decoration: none;
+    font-size: 16px;
+    color:$text;
+    &:hover {
+      color: $orange;
+    }
+  }
+  &__cart {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: $orange;
+    background-image: url(../imges/cart.svg);
+    background-size: 17px 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+  }
+  &__counter {
+    font-size: 8px;
+    color: $white;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+  }
+}
 
-.box {
-  background-color: $bg;
-  &__title {
-    color: #f00;
-  }
-  &__image {
-    max-width: 200px;
-  }
+.logo {
+  display: block;
+  background-image: url(../imges/logo.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 123px;
+  height: 32px;
 }

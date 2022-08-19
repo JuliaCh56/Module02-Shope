@@ -24,5 +24,16 @@
   "dependencies": {
     "core-js": "^3.24.1",
     "html-webpack-plugin": "^5.5.0"
-  }
+  },
+  "version": "1.0.0",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuliaCh56/Module02-Shope.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JuliaCh56/Module02-Shope/issues"
+  },
+  "homepage": "https://github.com/JuliaCh56/Module02-Shope#readme",
+  "description": ""
 }

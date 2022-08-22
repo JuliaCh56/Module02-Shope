@@ -13,14 +13,15 @@ html {
 
 body {
   font-size: 1.6rem;
+  color: $green;
   font-family: $font-jost;
 }
 
 .header {
   max-width: 1440px;
-  margin: 0 auto;
-  margin-top: 4rem;
+  margin: 0 auto 6rem;
   padding: 0 15px;
+  padding-top: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,7 +33,6 @@ body {
     gap: 4.8rem;
   }
   &__link {
-    font-size: 1.6rem;
     color:$green;
     text-decoration: none;
     &:hover {
@@ -41,7 +41,6 @@ body {
   }
   &__tel {
     text-decoration: none;
-    font-size: 1.6rem;
     color:$green;
     font-weight: 500;
     &:hover {
@@ -82,4 +81,101 @@ body {
   background-size: cover;
   width: 12.3rem;
   height: 3.2rem;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.main {
+  background-image: url(../imges/main.png);
+  background-size: cover;
+  background-position-x: center;
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  &__cover {
+    flex-basis: 763px;
+    height: 763px;
+    border: 1px solid rgba($green, .4);
+    border-radius: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  &__image {
+    width: 90%;
+  }
+  &__line {
+    width: 658px;
+    height: 658px;
+    border: 1px solid rgba($green, .4);
+    border-radius: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__item {
+    margin-left: 12rem;
+    max-width: 378px;
+    margin-top: 6rem;
+  }
+  &__link {
+    margin-top: 6rem;
+  }
+  &__btn {
+    background-color: $green;
+    border: none;
+    padding: 0;
+    width: 11px;
+    height: 11px;
+    box-shadow: 0 0 0 4px $white, 0 0 0 5px $white;
+    border-radius: 100%;
+    position: absolute;
+    &_1 {
+      top: 200px;
+      left: 200px;
+    }
+  }
+}
+
+.title {
+  font-family: $font-cormorant;
+  font-weight: 700;
+  font-size: 8rem;
+  margin: 0;
+  &__span {
+    font-style: italic;
+  }
+  &_block {
+    .title__span {
+      display: block;
+    }
+  }
+}
+
+.description {
+  margin: 0;
+  &_size-s{
+    font-size: 1.8rem;
+  }
+}
+
+.link {
+  color: $white;
+  text-transform: uppercase;
+  padding: 2.5rem 4.2rem;
+  background-color: $orange;
+  box-shadow: 0px 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
+  border-radius: 3.8rem;
+  display: inline-block;
 }

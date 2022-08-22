@@ -23,7 +23,8 @@
   },
   "dependencies": {
     "core-js": "^3.24.1",
-    "html-webpack-plugin": "^5.5.0"
+    "html-webpack-plugin": "^5.5.0",
+    "normalize.css": "^8.0.1"
   },
   "version": "1.0.0",
   "main": "babel.config.js",

@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 427 426" width="427" height="426">
+	<title>minus-svg</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #27300f } 
+	</style>
+	<path id="Layer" class="shp0" d="M405.33 235L21.33 235C9.56 235 0 225.44 0 213.67C0 201.89 9.56 192.33 21.33 192.33L405.33 192.33C417.11 192.33 426.67 201.89 426.67 213.67C426.67 225.44 417.11 235 405.33 235Z" />
+	<text id="" style="transform: matrix(1,0,0,1,108,261)" >
+	</text>
+</svg>

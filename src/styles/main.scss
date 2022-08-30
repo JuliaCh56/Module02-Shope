@@ -277,19 +277,22 @@ body {
   text-align: center;
   box-sizing: border-box;
   height: 6.5rem;
+  &:hover {
+    background-color: #bf601f;
+  }
+
   &_size-l {
     width: 26rem;
-    &:hover {
-      background-color: #bf601f;
-    }
   }
   &_size-m {
     width: 20rem;
   }
   &_size-s {
     width: 15.4rem;
+    height: 5.6rem;
+    padding: 2.1rem;
+    font-size: 1.4rem;
   }
-
 }
 
 
@@ -481,6 +484,10 @@ body {
     background-color: transparent;
     padding: 0;
     background-position: center center;
+    &_min {
+      height: 40px;
+      width: 40px;
+    }
   }
   &__minus {
     pointer-events: none;
@@ -500,6 +507,9 @@ body {
     width: 46px;
     border: none;
     padding: 0;
+    &_min {
+      width: 32px;
+    }
   }
 
 }
@@ -574,10 +584,104 @@ body {
   background-size: cover;
   background-position-x: center;
   background-repeat: no-repeat;
-  padding-bottom: 20rem;
+  padding-bottom: 18.8rem;
   &__text {
     margin-top: 3.8rem;
     margin-bottom: -1.4rem;
   }
 }
 
+.catalog {
+  background-image: url(../imges/catalog.png);
+  background-size: cover;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  padding-bottom: 20rem;
+}
+
+.category {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  &__list {
+    margin: 9.6rem 0 5.1rem;
+  }
+  &__order {
+    text-align: center;
+    flex-basis: 230px;
+  }
+  &__link {
+    padding: 2.4rem 0;
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: rgba($green, .5);
+    border-radius: 3.5rem;
+    border: 1px solid rgba($green, .5);
+    display: block;
+    &:hover {
+      border: 1px solid $orange;
+      color: $orange;
+    }
+  }
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  &__item {
+    width: 345px;
+    height: 515px;
+    border-radius: 2rem;
+    border: 1px solid rgba($green, .4);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+    padding-left: 3.2rem;
+    padding-right: 1.6rem;
+    margin: 0;
+    position: relative;
+    z-index: 0;
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+  }
+  &__cover {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 17px;
+    height: 314px;
+  }
+  &__image {
+    object-fit: contain;
+    max-width: 190px;
+  }
+  &__title {
+    font-family: $font-cormorant;
+    font-weight: 700;
+    font-size: 3rem;
+    color: $green;
+    margin: 0;
+  }
+  &__description {
+    padding: 0;
+    margin: 16px 0 14px;
+    width: 248px;
+    color: rgba($green, .7);
+    line-height: 1.5;
+    height: 54px;
+  }
+  &__price {
+    font-size: 2.4rem;
+    padding: 0;
+    margin: 0;
+  }
+}

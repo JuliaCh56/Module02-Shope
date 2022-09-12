@@ -279,11 +279,11 @@ body {
   display: inline-block;
   text-decoration: none;
   letter-spacing: 0.13rem;
-  padding: 0;
-  padding-top: 2.5rem;
+  padding: 2.5rem 0;
   text-align: center;
   box-sizing: border-box;
   height: 6.5rem;
+  border: none;
   &:hover {
     background-color: #bf601f;
   }
@@ -724,7 +724,7 @@ body {
   background-size: cover;
   background-position-x: center;
   background-repeat: no-repeat;
-  padding-bottom: 8rem;
+  padding-bottom: 19.6rem;
   &__box {
     display: flex;
     margin-top: 7.6rem;
@@ -775,5 +775,130 @@ body {
       background-image: url(../imges/paypal.svg);
       background-size: 85px 100%;
     }
+  }
+}
+
+.contact {
+  padding-bottom: 8rem;
+}
+.contact-box {
+  display: flex;
+  justify-content: space-between;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 570px;
+    margin-top: 25px;
+  }
+  &__text {
+    margin-left: 12rem;
+    margin-top: 6.6rem;
+  }
+  &__list {
+    margin-top: 6rem;
+    list-style: none;
+    padding: 0;
+  }
+  &__form {
+    width: 59rem;
+    box-sizing: border-box;
+  }
+  &__contact {
+    margin-bottom: 20px;
+    display: flex;
+    &:nth-child(1) {
+      &::before {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 25px;
+        background-image: url(../imges/phone.svg);
+        background-size: 30px 25px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        margin-right: 3rem;
+      }
+    }
+
+    &:nth-child(2) {
+      &::before {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 20px;
+        background-image: url(../imges/mail-svg.svg);
+        background-size: 30px 18px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        margin-right: 30px;
+      }
+    }
+  }
+  &__link {
+    text-decoration: none;
+    font-size: 2.4rem;
+    color: $green;
+    font-weight: 500;
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+.card {
+  border-radius: 2rem;
+  border: 2px solid rgba($green, .4);
+  width: 59rem;
+  box-sizing: border-box;
+
+  padding: 3.1rem 6rem 4rem;
+  &__title{
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: $font-cormorant;
+    margin: 0;
+    margin-bottom: 3rem;
+  }
+  &__label{
+    font-size: 1.2rem;
+    margin: 0;
+    margin-left: .6rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  &__input {
+    color: rgba($green, .4);
+    border: 1px solid rgba($green, .4);
+    border-radius: 2rem;
+    padding: 2.2rem 3rem;
+    margin-bottom: 2.9rem;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    &:focus {
+      border: 1px solid rgba($green, 1);
+      outline: none;
+    }
+    &:invalid {
+      border: red;
+    }
+  }
+  &__check {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: rgba($green, .6);
+    max-width: 360px;
+    margin: 0;
+  }
+  &__docs {
+    color: rgba($green, .6);
+    text-decoration: none;
+    border-bottom: 1px solid #ecedec;
+  }
+  &__link {
+    margin-top: 1.2rem;
+    margin-bottom: 1.5rem;
   }
 }

@@ -1,3 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29" height="19" viewBox="0 0 29 19">
-  <image id="mail" width="29" height="19" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAATCAYAAABsmQZ/AAABSklEQVRIie3WPS9EQRTG8d9uFqGi0qg0VDpCI1FtQSEKtQSRSGxDKMVnoCKyKoVGfApvHWKzXwJREM2SSQ7ZSJZd3M7T3My9zzn/zJkzMzd3tdzfhz2MIic7veIMiwXso4J5PGUI7cJ64iXoCOZwjmNs4uEPYd3YwkywbvNR0mdMoQdVLCD/S1g+8lQj72RwcoU60yU6MIYdLGEl1qFVpf7YDvA0TvGCXp9m0x7PZBiO5jrBwbu5CfWG/yTihyNfff6GJaxhF4N4jEZbRVsDf1t8r4R/MOJrjer+le5Rwnis+TWKn/zFeD8VvlLENVThG+i7bjCB2ShbNcqW1n8AazhqMlfLHXoUkHKMyzFuGqiFmdYrtf3hD+I+9Nu9+A/9h35A0z3XibuMWSl/4rymLXOBDQzFNZSVUv7EuUjQdHmnUyadOtn/OTD/Bia7QeC85BIFAAAAAElFTkSuQmCC"/>
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480">
+	<title>mail-svg</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #d26a22} 
+	</style>
+	<g id="Layer">
+		<g id="Layer">
+			<path id="Layer" fill-rule="evenodd" class="shp0" d="M480 120L480 360C479.97 382.08 462.08 399.97 440 400L40 400C17.92 399.97 0.03 382.08 0 360L0 120C0.03 97.92 17.92 80.03 40 80L440 80C462.08 80.03 479.97 97.92 480 120ZM464 120C464 106.75 453.25 96 440 96L40 96C26.74 96 16 106.75 16 120L16 360C16 373.25 26.74 384 40 384L440 384C453.25 384 464 373.25 464 360L464 120Z" />
+		</g>
+	</g>
+	<g id="Layer">
+		<g id="Layer">
+			<path id="Layer" class="shp0" d="M444.12 126.86L268.8 232.04C251.08 242.69 228.92 242.69 211.2 232.04L35.88 126.86C32.23 124.57 31.04 119.81 33.19 116.08C35.4 112.25 40.29 110.94 44.12 113.14L219.42 218.32C232.08 225.94 247.92 225.94 260.58 218.32L435.88 113.14C439.67 110.87 444.58 112.09 446.86 115.88C449.13 119.67 447.91 124.58 444.12 126.86Z" />
+		</g>
+	</g>
+	<g id="Layer">
+		<g id="Layer">
+			<path id="Layer" class="shp0" d="M48 152L48 360C48 364.42 44.42 368 40 368C35.58 368 32 364.42 32 360L32 152C32 147.58 35.58 144 40 144C44.42 144 48 147.58 48 152Z" />
+		</g>
+	</g>
+	<g id="Layer">
+		<g id="Layer">
+			<path id="Layer" class="shp0" d="M448 152L448 360C448 364.42 444.42 368 440 368C435.58 368 432 364.42 432 360L432 152C432 147.58 435.58 144 440 144C444.42 144 448 147.58 448 152Z" />
+		</g>
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
+	<g id="Layer">
+	</g>
 </svg>

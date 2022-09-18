@@ -15,6 +15,10 @@ body {
   font-size: 1.6rem;
   color: $green;
   font-family: $font-jost;
+  background-image: url(../imges/background.png);
+  background-size: cover;
+  background-position-x: center;
+  background-repeat: no-repeat;
 }
 
 .header {
@@ -25,6 +29,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 8rem;
+  &__navigation {
+    flex-grow: 1;
+    margin-left: 4rem;
+  }
   &__nav {
     display: flex;
     list-style-type: none;
@@ -35,6 +44,7 @@ body {
   &__link {
     color:$green;
     text-decoration: none;
+    transition: .5s;
     &:hover {
       color: $orange;
     }
@@ -43,13 +53,17 @@ body {
     text-decoration: none;
     color:$green;
     font-weight: 500;
+    transition: .5s;
+    flex-basis: 200px;
+    text-align: right;
+    letter-spacing: .13rem;
     &:hover {
       color: $orange;
     }
   }
   &__cart {
     display: block;
-    width: 4rem;
+    flex-basis: 4rem;
     height: 4rem;
     border-radius: 100%;
     background-color: $orange;
@@ -59,6 +73,7 @@ body {
     background-position: center;
     position: relative;
     border: 1px solid $orange;
+    transition: .5s;
     &:hover {
       background-color: $green;
       border: 1px solid $green;
@@ -80,7 +95,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
 &_size-s {
-  width: 12rem;
+  flex-basis: 12rem;
   height: 3.2rem;
 }
 &_size-m {
@@ -98,9 +113,6 @@ body {
 }
 
 .main {
-  background-image: url(../imges/main.png);
-  background-size: cover;
-  background-position-x: center;
   position: relative;
   padding-bottom: 187px;
   z-index: 0;
@@ -132,7 +144,7 @@ body {
   &__image {
     width: 90%;
     border-radius: 100%;
-    box-shadow: 20px 23px 21px 11px rgba($green, .20);
+    animation: shadow 5s infinite;
   }
   &__line {
     width: 656px;
@@ -176,6 +188,7 @@ body {
       border-radius: 100%;
       position: absolute;
       background-color: $green;
+      transition: .5s;
     }
     &_1 {
       top: 43px;
@@ -305,6 +318,7 @@ body {
   box-sizing: border-box;
   height: 6.5rem;
   border: none;
+  transition: .5s;
   &:hover {
     background-color: #bf601f;
   }
@@ -325,10 +339,6 @@ body {
 
 
 .offer {
-  background-image: url(../imges/offer.png);
-  background-size: cover;
-  background-position-x: center;
-  background-repeat: no-repeat;
   padding-top: 2rem;
   padding-bottom: 16rem;
   &__text {
@@ -356,6 +366,7 @@ body {
     background-size: cover;
     position: relative;
     z-index: 0;
+    transition: .5s;
     &_size-m {
       height: 520px;
       justify-content: flex-end;
@@ -429,6 +440,7 @@ body {
       margin: 0;
       letter-spacing: .1rem;
       opacity: 0.8;
+      transition: .5s;
       &:hover {
         opacity: 1;
       }
@@ -479,6 +491,7 @@ body {
   }
   &-button-next, &-button-prev {
     top: -60px;
+    transition: .5s;
     &:hover {
       &::after {
         color: rgba($green, 1);
@@ -543,10 +556,6 @@ body {
 }
 
 .about {
-  background-image: url(../imges/about.png);
-  background-size: cover;
-  background-position-x: center;
-  background-repeat: no-repeat;
   padding-bottom: 20rem;
   &__box {
     display: flex;
@@ -608,10 +617,6 @@ body {
 }
 
 .trends {
-  background-image: url(../imges/trends.png);
-  background-size: cover;
-  background-position-x: center;
-  background-repeat: no-repeat;
   padding-bottom: 18.8rem;
   &__text {
     margin-top: 3.8rem;
@@ -620,10 +625,6 @@ body {
 }
 
 .catalog {
-  background-image: url(../imges/catalog.png);
-  background-size: cover;
-  background-position-x: center;
-  background-repeat: no-repeat;
   padding-bottom: 8rem;
   &__btn {
       text-transform: uppercase;
@@ -638,6 +639,7 @@ body {
       opacity: 0.8;
       background-color: $white;
       border: unset;
+      transition: .5s;
       &:hover {
         opacity: 1;
       }
@@ -675,6 +677,7 @@ body {
     border-radius: 3.5rem;
     border: 1px solid rgba($green, .5);
     display: block;
+    transition: .5s;
     &:hover {
       border: 1px solid $orange;
       color: $orange;
@@ -741,10 +744,6 @@ body {
 }
 
 .delivery {
-  background-image: url(../imges/delivery.png);
-  background-size: cover;
-  background-position-x: center;
-  background-repeat: no-repeat;
   padding-bottom: 20rem;
   &__box {
     display: flex;
@@ -776,9 +775,12 @@ body {
       box-sizing: border-box;
       opacity: .4;
       margin: 0;
+      transform: scale(1);
+      transition: .5s;
 
     &:hover {
       opacity: 1;
+      transform: scale(1.05);
     }
 
     &:nth-child(1) {
@@ -862,6 +864,7 @@ body {
     font-size: 2.4rem;
     color: $green;
     font-weight: 500;
+    transition: .5s;
     &:hover {
       color: $orange;
     }
@@ -925,10 +928,7 @@ body {
 }
 
 .footer-box {
-  background-image: url(../imges/end.png);
-  background-size: cover;
-  background-position-x: center;
-  background-repeat: no-repeat;
+  padding-bottom: 8.5rem;
 }
 
 .footer {
@@ -939,6 +939,11 @@ body {
     margin-top: 7.8rem;
     display: flex;
     justify-content: space-between;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 66.6%;
   }
   &__list {
     display: flex;
@@ -964,6 +969,7 @@ body {
     text-decoration: none;
     color: $green;
     font-size: 2.7rem;
+    transition: .5s;
     &:hover {
       color: $orange;
     }
@@ -972,6 +978,7 @@ body {
     text-decoration: none;
     color: $green;
     font-size: 1.8rem;
+    transition: .5s;
     &:hover {
       color: $orange;
     }
@@ -989,6 +996,7 @@ body {
   &__text-link {
     text-decoration: none;
     color: rgba($green, .6);
+    transition: .5s;
     &:hover {
       color: $green;
     }
@@ -1016,6 +1024,7 @@ body {
     border-radius: 100%;
     box-sizing: border-box;
     background-position: center center;
+    transition: .5s;
     &:hover {
       opacity: 1;
     }
@@ -1038,5 +1047,17 @@ body {
       background-repeat: no-repeat;
       opacity: .8;
     }
+  }
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: 0 0 0 0 rgba($green, .5);
+  }
+  50% {
+    box-shadow: 20px 23px 21px 11px rgba($green, .5);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba($green, .5);
   }
 }

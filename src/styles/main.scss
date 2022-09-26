@@ -1,11 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,700;1,700&family=Jost:wght@400;500&display=swap');
 
+
 $green: #27300f;
 $orange: #d26a22;
 $white: #fff;
 
 $font-jost: 'Jost', sans-serif;
 $font-cormorant: 'Cormorant', serif;;
+
+$r_minmob: 320px;
+$r_mob_360: 360px;
+$r_mob_400: 400px;
+$r_mob_500: 500px;
+$r_mob_600: 600px;
+$r_tab: 768px;
+$r_tab_900: 900px;
+$r_desk: 1000px;
+$r_desk_1120: 1120px;
+$r_desk_hd: 1200px;
+$r_desk_1280: 1280px;
+$r_desk_1350: 1350px;
+$r_full_1750: 1750px;
+
 
 html {
   font-size: 10px;
@@ -17,7 +33,6 @@ body {
   font-family: $font-jost;
   background-image: url(../imges/background.png);
   background-size: cover;
-  background-position-x: center;
   background-repeat: no-repeat;
 }
 
@@ -29,10 +44,28 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 8rem;
+  gap: 5%;
+  @media (max-width: $r_desk_1280) {
+    gap: 3%;
+  }
+  @media (max-width: $r_mob_360) {
+    padding-top: 1.4rem;
+    padding-right: 0;
+    margin: 0;
+  }
+
   &__navigation {
     flex-grow: 1;
-    margin-left: 4rem;
+    margin-left: 4.5rem;
+    @media (max-width: $r_desk_1280) {
+      margin-left: 0;
+    }
+    @media (max-width: $r_desk_hd) {
+      flex-grow: 0;
+    }
+    @media (max-width: $r_tab_900) {
+      display: none;
+    }
   }
   &__nav {
     display: flex;
@@ -40,6 +73,9 @@ body {
     margin: 0;
     padding-left: 0;
     gap: 4.8rem;
+    @media (max-width: $r_desk_hd) {
+      gap: 2.5rem;
+    }
   }
   &__link {
     color:$green;
@@ -60,10 +96,13 @@ body {
     &:hover {
       color: $orange;
     }
+    @media (max-width: $r_desk_hd) {
+      display: none;
+    }
   }
   &__cart {
     display: block;
-    flex-basis: 4rem;
+    width: 4rem;
     height: 4rem;
     border-radius: 100%;
     background-color: $orange;
@@ -74,10 +113,25 @@ body {
     position: relative;
     border: 1px solid $orange;
     transition: .5s;
+    cursor: pointer;
+
+    @media (max-width: $r_desk_hd) {
+      background-image: url(../imges/cart-black.svg);
+      border: 1px solid $green;
+      background-color: $white;
+      opacity: .8;
+      width: 3.5rem;
+      height: 3.5rem;
+    }
     &:hover {
       background-color: $green;
       border: 1px solid $green;
+      @media (max-width: $r_desk_hd) {
+        background-color: $white;
+        opacity: 1;
+      }
     }
+
 
   }
   &__counter {
@@ -86,6 +140,60 @@ body {
     position: absolute;
     right: .6rem;
     top: .6rem;
+    @media (max-width: $r_desk_hd) {
+      color: $green;
+    }
+  }
+  &__phone, &__menu {
+  display: none;
+  }
+  &__phone {
+    @media (max-width: $r_desk_hd) {
+      display: block;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 100%;
+      background-color: $white;
+      background-image: url(../imges/tel.svg);
+      background-size: 1.7rem 1.5rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      border: 1px solid $green;
+      transition: .5s;
+      opacity: .8;
+    }
+      &:hover {
+      opacity: 1;
+    }
+  }
+  &__menu{
+    @media (max-width: $r_tab_900) {
+      display: block;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 100%;
+      background-color: $white;
+      background-image: url(../imges/menu.svg);
+      background-size: 1.7rem 1.5rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      border: 1px solid $green;
+      transition: .5s;
+      cursor: pointer;
+      opacity: .8;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &__buttons {
+    @media (max-width: $r_desk_hd) {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+    }
   }
 }
 
@@ -97,6 +205,10 @@ body {
 &_size-s {
   flex-basis: 12rem;
   height: 3.2rem;
+  @media (max-width: $r_tab_900) {
+    flex-basis: 9rem;
+    margin-top: .8rem;
+  }
 }
 &_size-m {
   width: 18rem;
@@ -109,24 +221,46 @@ body {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 15px;
+  @media (max-width: $r_tab) {
+    max-width: 600px;
+    padding: 0;
+  }
 }
 
 .main {
   position: relative;
-  padding-bottom: 187px;
+  padding-bottom: 18.7rem;
   z-index: 0;
   background-repeat: no-repeat;
+  @media (max-width: $r_tab) {
+    padding-bottom: 0;
+  }
 
   &__flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+    @media (max-width: $r_desk_1120) {
+      padding-top: 3rem;
+      padding-bottom: 9rem;
+    }
+    @media (max-width: $r_tab) {
+      padding-bottom: 4rem;
+      padding-top: 3.8rem;
+    }
   }
 
   &__text {
     padding-top: 4rem;
+    @media (max-width: $r_desk_1120) {
+      flex-basis: 395px;
+    }
+    @media (max-width: $r_tab) {
+      flex-basis: 100%;
+      padding-top: 0;
+    }
   }
 
 
@@ -140,12 +274,46 @@ body {
     flex-direction: column;
     justify-content: center;
     position: relative;
+    @media (max-width: $r_desk_1350) {
+      flex-basis: 650px;
+      height: 650px;
+    }
+    @media (max-width: $r_desk_hd) {
+      flex-basis: 600px;
+      height: 600px;
+    }
+    @media (max-width: $r_desk_1120) {
+      border: 1px solid transparent;
+      height: 500px;
+      flex-basis: calc(100% - 395px);
+    }
+    @media (max-width: $r_tab) {
+      display: none;
+    }
+    
   }
   &__image {
     width: 90%;
     border-radius: 100%;
     animation: shadow 5s infinite;
   }
+
+  &__image-mobil {
+    display: none;
+    @media (max-width: $r_tab) {
+      display: block;
+      max-width: 300px;
+      border-radius: 100%;
+      margin: 0 auto;
+      margin-top: 3rem;
+      animation: shadow-mob 5s infinite;
+    }
+    @media (max-width: $r_mob_360) {
+      max-width: 22.8rem;
+      margin-top: 2.1rem;
+    }
+  }
+
   &__line {
     width: 656px;
     height: 656px;
@@ -155,15 +323,39 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media (max-width: $r_desk_1350) {
+      width: 600px;
+      height: 600px;
+    }
+    @media (max-width: $r_desk_hd) {
+      width: auto;
+      height: auto;
+      border: 1px solid transparent;
+    }
   }
 
   &__item {
     margin-left: 12rem;
     max-width: 378px;
     margin-top: 5.6rem;
+    @media (max-width: $r_desk_1280) {
+      margin-left: 8rem;
+    }
+    @media (max-width: $r_desk_1120) {
+      margin-left: 4rem;
+    }
+    @media (max-width: $r_tab) {
+      margin-left: 0;
+      max-width: 100%;
+      margin-top: 1.8rem;
+    }
   }
   &__link {
     margin-top: 5.5rem;
+    @media (max-width: $r_tab) {
+      text-align: center;
+      margin-top: 2.4rem;
+    }
   }
 
   &__btn {
@@ -193,6 +385,13 @@ body {
     &_1 {
       top: 43px;
       left: 66px;
+      @media (max-width: $r_desk_hd) {
+        top: 39px;
+        left: 17px;
+      }
+      @media (max-width: $r_desk_1120) {
+        display: none;
+      }
       &::before {
         bottom: 11px;
         left: 84px;
@@ -201,6 +400,15 @@ body {
     &_2 {
       top: 191px;
       right: 3px;
+      @media (max-width: $r_desk_1350) {
+        top: 109px;
+      }
+      @media (max-width: $r_desk_hd) {
+        top: 58px;
+      }
+      @media (max-width: $r_desk_1120) {
+        display: none;
+      }
       &::before {
         top: 17px;
         right: 89px;
@@ -209,6 +417,12 @@ body {
     &_3 {
       bottom: -46px;
       right: 245px;
+      @media (max-width: $r_desk_1350) {
+        bottom: -59px;
+      }
+      @media (max-width: $r_desk_1120) {
+        display: none;
+      }
       &::before {
         bottom: 54px;
         right: 31px;
@@ -223,16 +437,35 @@ body {
   &__tomato {
     position: absolute;
     bottom: 124px;
-    right: 175px;
+    right: 0;
     width: 11rem;
     z-index: -1;
+    @media (max-width: $r_desk_hd) {
+      bottom: 185px;
+    }
+
+    @media (max-width: $r_tab) {
+      top: 63px;
+      left: -21px;
+      bottom: 0;
+      width: 6rem;
+    }
   }
   &__avocado {
     position: absolute;
     top: 46px;
-    right: 45px;
+    right: 0;
     width: 19.4rem;
     z-index: -1;
+    @media (max-width: $r_desk_hd) {
+      width: 15rem;
+      top: 90px;
+    }
+    @media (max-width: $r_tab) {
+      top: 72px;
+      right: -50px;
+      width: 8.1rem;
+    }
   }
   &__pepper {
     position: absolute;
@@ -240,13 +473,30 @@ body {
     left: 40px;
     width: 8.6rem;
     z-index: -1;
+    @media (max-width: $r_desk_hd) {
+      width: 4rem;
+    }
+    @media (max-width: $r_tab) {
+      top: 232px;
+      left: -12px;
+      width: 3.6rem;
+    }
   }
   &__cucumber {
     position: absolute;
     top: 0;
-    left: 747px;
+    left: 36.7%;
     width: 8.5rem;
     z-index: -1;
+    @media (max-width: $r_tab) {
+      bottom: 120px;
+      left: inherit;
+      top: inherit;
+      right: 0;
+      width: 4.5rem;
+      height: 2.8rem;
+      transform: rotate(90deg);
+    }
   }
   &__beans {
     position: absolute;
@@ -254,6 +504,9 @@ body {
     left: 0;
     width: 11rem;
     z-index: -1;
+    @media (max-width: $r_tab) {
+      display: none;
+    }
   }
 }
 
@@ -263,6 +516,18 @@ body {
   font-size: 8rem;
   line-height: 1;
   margin: 0;
+  @media (max-width: $r_desk_1280) {
+    font-size: 7rem;
+  }
+  @media (max-width: $r_desk_1120) {
+    font-size: 6rem;
+  }
+  @media (max-width: $r_tab) {
+    text-align: center;
+  }
+  @media (max-width: $r_mob_500) {
+    font-size: 3rem;
+  }
   &__span {
     font-style: italic;
   }
@@ -276,11 +541,29 @@ body {
 .description {
   margin: 0;
   line-height: 1.5;
+  @media (max-width: $r_tab) {
+    text-align: center;
+    max-width: 24.7rem;
+    margin: 0 auto;
+  }
+
   &_size-s{
     font-size: 1.8rem;
+    @media (max-width: $r_desk_1280) {
+      font-size: 1.6rem;
+    }
+    @media (max-width: $r_mob_500) {
+      font-size: 1.2rem;
+    }
   }
   &_size-m{
     font-size: 2.4rem;
+    @media (max-width: $r_desk_1280) {
+      font-size: 2.2rem;
+    }
+    @media (max-width: $r_mob_500) {
+      font-size: 1.2rem;
+    }
   }
   &__link {
     color: $green;
@@ -319,12 +602,24 @@ body {
   height: 6.5rem;
   border: none;
   transition: .5s;
+  @media (max-width: $r_desk_1280) {
+    font-size: 1.4rem;
+  }
+  @media (max-width: $r_tab) {
+    font-size: 1.2rem;
+    padding: 1.7rem 0;
+    height: 4.6rem;
+  }
+
   &:hover {
     background-color: #bf601f;
   }
 
   &_size-l {
     width: 26rem;
+    @media (max-width: $r_mob_360) {
+      width: 18.1rem;
+    }
   }
   &_size-m {
     width: 20rem;
@@ -344,7 +639,11 @@ body {
   &__text {
     margin-top: 6rem;
     max-width: 700px;
+    @media (max-width: $r_tab) {
+      margin-top: 3rem;
+    }
  }
+ 
 }
 
 .slider {
@@ -566,6 +865,17 @@ body {
   &__text {
     margin-left: 12rem;
     flex-basis: 620px;
+    @media (max-width: $r_desk_1280) {
+      margin-left: 8rem;
+    }
+    @media (max-width: $r_desk_1120) {
+      margin-left: 4rem;
+    }
+    @media (max-width: $r_tab) {
+      margin-left: 0;
+      max-width: 100%;
+      margin-top: 3rem;
+    }
   }
   &__list {
     display: flex;
@@ -1056,6 +1366,18 @@ body {
   }
   50% {
     box-shadow: 20px 23px 21px 11px rgba($green, .5);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba($green, .5);
+  }
+}
+
+@keyframes shadow-mob {
+  0% {
+    box-shadow: 0 0 0 0 rgba($green, .5);
+  }
+  50% {
+    box-shadow: 10px 11px 21px 5px rgba($green, .5);
   }
   100% {
     box-shadow: 0 0 0 0 rgba($green, .5);

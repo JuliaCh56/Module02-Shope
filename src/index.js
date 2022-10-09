@@ -58,4 +58,21 @@ import Swiper, { Navigation, Pagination } from 'swiper';
       prevEl: ".swiper-button-prev",
     },
     modules: [Navigation, Pagination],
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        slidesPerGroup: 1
+      },
+      // when window width is >= 480px
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2
+      },
+      // when window width is >= 640px
+      1000: {
+        slidesPerView: 3,
+        slidesPerGroup: 3
+      }
+    }
   });

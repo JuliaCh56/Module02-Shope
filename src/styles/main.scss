@@ -233,6 +233,7 @@ body {
   padding-bottom: 18.7rem;
   z-index: 0;
   background-repeat: no-repeat;
+  
   @media (max-width: $r_tab) {
     padding-bottom: 0;
   }
@@ -248,7 +249,7 @@ body {
     }
     @media (max-width: $r_tab) {
       padding-bottom: 4rem;
-      padding-top: 3.8rem;
+      padding-top: 3.4rem;
     }
   }
 
@@ -354,7 +355,7 @@ body {
     margin-top: 5.5rem;
     @media (max-width: $r_tab) {
       text-align: center;
-      margin-top: 2.4rem;
+      margin-top: 2.7rem;
     }
   }
 
@@ -522,7 +523,7 @@ body {
   @media (max-width: $r_desk_1120) {
     font-size: 6rem;
   }
-  @media (max-width: $r_tab) {
+  @media (max-width: $r_tab_900) {
     text-align: center;
   }
   @media (max-width: $r_mob_500) {
@@ -541,10 +542,12 @@ body {
 .description {
   margin: 0;
   line-height: 1.5;
-  @media (max-width: $r_tab) {
+  @media (max-width: $r_tab_900) {
     text-align: center;
-    max-width: 24.7rem;
     margin: 0 auto;
+  }
+  @media (max-width: $r_mob_500) {
+    max-width: 24.7rem;
   }
 
   &_size-s{
@@ -560,6 +563,9 @@ body {
     font-size: 2.4rem;
     @media (max-width: $r_desk_1280) {
       font-size: 2.2rem;
+    }
+    @media (max-width: $r_tab_900) {
+      font-size: 1.8rem;
     }
     @media (max-width: $r_mob_500) {
       font-size: 1.2rem;
@@ -609,6 +615,7 @@ body {
     font-size: 1.2rem;
     padding: 1.7rem 0;
     height: 4.6rem;
+    letter-spacing: 1px;
   }
 
   &:hover {
@@ -623,6 +630,12 @@ body {
   }
   &_size-m {
     width: 20rem;
+    @media (max-width: $r_tab) {
+      width: 12.5rem;
+      height: 4.3rem;
+      letter-spacing: 0;
+      font-size: .8rem;
+    }
   }
   &_size-s {
     width: 15.4rem;
@@ -636,11 +649,25 @@ body {
 .offer {
   padding-top: 2rem;
   padding-bottom: 16rem;
+  @media (max-width: $r_desk_1120) {
+    padding-bottom: 9rem;
+  }
+  @media (max-width: $r_tab) {
+    padding-bottom: 4rem;
+    padding-top: 1.9rem;
+  }
+  @media (max-width: $r_mob_500) {
+    padding-bottom: 3rem;
+  }
   &__text {
     margin-top: 6rem;
     max-width: 700px;
-    @media (max-width: $r_tab) {
+    @media (max-width: $r_tab_900) {
+      margin: 0 auto;
       margin-top: 3rem;
+    }
+    @media (max-width: $r_mob_500) {
+      margin-top: 2.6rem;
     }
  }
  
@@ -649,6 +676,16 @@ body {
 .slider {
   overflow: hidden;
   padding-top: 100px;
+  @media (max-width: $r_tab) {
+    max-width: 450px;
+    margin: 0 auto;
+    padding-bottom: 6rem;
+    padding-top: 5.4rem;
+  }
+  @media (max-width: $r_mob_500) {
+    max-width: 209px;
+    padding-top: 4.2rem;
+  }
  }
 
 .swiper {
@@ -669,6 +706,19 @@ body {
     &_size-m {
       height: 520px;
       justify-content: flex-end;
+      @media (max-width: $r_desk_hd) {
+        height: 400px;
+        background-size: contain;
+        background-position: 100% 50%;
+      }
+      @media (max-width: $r_mob_500) {
+        height: 241px;
+        background-size: 150px;
+        background-position: 0% 0%;
+        padding-bottom: 20px;
+        background-color: $white;
+      }
+      
       &:hover {
         box-shadow: 0 0 0 3px rgba($green, .4) inset;
       }
@@ -676,12 +726,24 @@ body {
     &_size-l {
       height: 685px;
       padding-top: 27px;
+      @media (max-width: $r_desk_hd) {
+        height: 400px;
+        background-color: $white;
+      }
+      @media (max-width: $r_mob_500) {
+        height: 302px;
+        background-color: $white;
+        padding: 29px 31px 20px;
+      }
     }
     &_white {
       &:hover {
         .swiper-slide__hover {
           height: 233px;
           opacity: 1;
+          @media (max-width: $r_mob_500) {
+            display: none;
+          }
         }
         &::after {
           content: '';
@@ -713,10 +775,17 @@ body {
       font-size: 3rem;
       color: $green;
       margin: 0;
+      @media (max-width: $r_mob_500) {
+        font-size: 1.4rem;
+        text-align: center;
+      }
     }
     &__hover {
       height: 0;
       opacity: 0;
+      @media (max-width: $r_mob_500) {
+        display: block;
+      }
     }
 
     &__text {
@@ -726,6 +795,9 @@ body {
       margin-top: 2.5rem;
       color: rgba($green, .7);
       max-width: 263px;
+      @media (max-width: $r_mob_500) {
+        display: none;
+      }
     }
 
     &__link {
@@ -753,21 +825,66 @@ body {
           background-repeat: no-repeat;
         }
     }
+    &__mobil-link {
+      display: none;
+      @media (max-width: $r_mob_500) {
+        text-transform: uppercase;
+        color: $green;
+        font-size: 1rem;
+        text-decoration: none;
+        display: flex;
+        gap: 1rem;
+        margin: 0;
+        margin-top: 15px;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: .1rem;
+        opacity: 0.8;
+        transition: .5s;
+        &:hover {
+          opacity: 1;
+        }
+          &::before {
+            content: '';
+            display: block;
+            width: 2rem;
+            height: 2rem;
+            background-image: url(../imges/plus.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
+      }
+    }
+
     &__footer {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-top: 30px;
+      @media (max-width: $r_tab) {
+        margin-top: 20px;
+        justify-content: center;
+      }
     }
     &__cover {
       display: flex;
       justify-content: center;
       margin-bottom: 40px;
       height: 314px;
+      @media (max-width: $r_mob_500) {
+        margin: 0 auto;
+        margin-bottom: 20px;
+        height: 80px;
+        width: 107px;
+      }
     }
     &__image {
       object-fit: contain;
       max-width: 300px;
+      @media (max-width: $r_mob_500) {
+        max-width: 100%;
+      }
+
     }
     &__description {
       padding: 0;
@@ -777,20 +894,40 @@ body {
       font-size: 1.8rem;
       line-height: 1.5;
       height: 54px;
+
+      
+      @media (max-width: $r_mob_500) {
+        margin: 9px 0 13px;
+        font-size: 1.2rem;
+        width: 139px;
+        text-align: center;
+        height: 44px;
+      }
     }
     &__price {
       font-size: 2.4rem;
       padding: 0;
       margin: 0;
+      @media (max-width: $r_mob_500) {
+        font-size: 1.4rem;
+        text-align: center;
+      }
     }
+
   }
 
   &-pagination {
     display: none;
+    @media (max-width: $r_tab) {
+      display: block;
+    }
   }
   &-button-next, &-button-prev {
     top: -60px;
     transition: .5s;
+    @media (max-width: $r_tab) {
+      display: none;
+    }
     &:hover {
       &::after {
         color: rgba($green, 1);
@@ -813,8 +950,31 @@ body {
   }
 }
 
+.swiper-horizontal>.swiper-pagination-bullets {
+  bottom: -50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: $r_mob_500) {
+    bottom: -38px;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: $orange;
+  border: 1px solid $orange;
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+}
+
 .counter {
   display: flex;
+  @media (max-width: $r_tab) {
+    display: none;
+  }
   &__btn {
     cursor: pointer;
     height: 50px;
@@ -856,11 +1016,18 @@ body {
 
 .about {
   padding-bottom: 20rem;
+  @media (max-width: $r_tab_900) {
+    padding-bottom: 5.6rem;
+  }
   &__box {
     display: flex;
     margin-top: 6.2rem;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: $r_tab_900) {
+      flex-direction: column;
+      margin-top: 3rem;
+    }
   }
   &__text {
     margin-left: 12rem;
@@ -871,10 +1038,10 @@ body {
     @media (max-width: $r_desk_1120) {
       margin-left: 4rem;
     }
-    @media (max-width: $r_tab) {
+    @media (max-width: $r_tab_900) {
+      flex-basis: 7rem;
+      margin-bottom: 2.3rem;
       margin-left: 0;
-      max-width: 100%;
-      margin-top: 3rem;
     }
   }
   &__list {
@@ -883,6 +1050,12 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
+    @media (max-width: $r_desk_1280) {
+      gap: 6rem;
+    }
+    @media (max-width: $r_desk_1120) {
+      gap: 4rem;
+    }
   }
   &__item {
     display: flex;
@@ -893,6 +1066,9 @@ body {
     font-weight: 700;
     font-style: italic;
     font-family: $font-cormorant;
+    @media (max-width: $r_tab_900) {
+      font-size: 1.4rem;
+    }
     &::before {
       content: '';
       display: block;
@@ -900,27 +1076,38 @@ body {
       height: 87px;
       background-position: center center;
       background-repeat: no-repeat;
-      border-radius: 44px;
+      border-radius: 100%;
       box-sizing: border-box;
       border: 1px solid rgba($green, .4);
       margin-bottom: 1.5rem;
+      @media (max-width: $r_tab_900) {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 9px;
+      }
     }
     &:nth-child(1) {
       &::before {
       background-image: url(../imges/fruits-svg.svg);
       background-size: 44px 42px;
+      @media (max-width: $r_tab_900) {
+        background-size: 44px 31px;;
+      }
       }
     }
     &:nth-child(2) {
       &::before {
       background-image: url(../imges/traditional-svg.svg);
       background-size: 40px 40px;
+      @media (max-width: $r_tab_900) {
+        background-size: 27px 27px;;
+      }
       }
     }
     &:nth-child(3) {
       &::before {
       background-image: url(../imges/good-svg.svg);
-      background-size: 44px 44px;
+      background-size: 30px 30px;
       }
     }
   }
@@ -928,9 +1115,15 @@ body {
 
 .trends {
   padding-bottom: 18.8rem;
+  @media (max-width: $r_tab_900) {
+    padding-bottom: 5.1rem;
+  }
   &__text {
     margin-top: 3.8rem;
     margin-bottom: -1.4rem;
+    @media (max-width: $r_tab_900) {
+      margin-top: 1.8rem;
+    }
   }
 }
 
@@ -972,12 +1165,23 @@ body {
   display: flex;
   align-items: center;
   gap: 2rem;
+  @media (max-width: $r_tab_900) {
+    gap: 1rem;
+  }
   &__list {
     margin: 9.6rem 0 5.1rem;
+    @media (max-width: $r_tab_900) {
+      flex-wrap: wrap;
+      margin: 5.6rem 0 1.8rem;
+      justify-content: center;
+    }
   }
   &__order {
     text-align: center;
     flex-basis: 230px;
+    @media (max-width: $r_tab_900) {
+      flex-basis: 107px;
+    }
   }
   &__link {
     padding: 2.4rem 0;
@@ -988,6 +1192,11 @@ body {
     border: 1px solid rgba($green, .5);
     display: block;
     transition: .5s;
+    @media (max-width: $r_tab_900) {
+      font-size: 1rem;
+      padding: 14px 0;
+    }
+
     &:hover {
       border: 1px solid $orange;
       color: $orange;
@@ -1020,6 +1229,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 30px;
+
   }
   &__cover {
     display: flex;
